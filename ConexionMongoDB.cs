@@ -17,7 +17,7 @@ namespace Proyecto_final
         {
             var cliente = new MongoClient(ConfigurationManager.AppSettings["MongoBDConnectionString"]);
             var database = cliente.GetDatabase(ConfigurationManager.AppSettings["MongoDBDatabaseName"]);
-            _trabajadoresCollection = database.GetCollection<Trabajador>("Trabajador");
+            _trabajadoresCollection = database.GetCollection<Trabajador>("Trabajadores");
         }
 
         public Trabajador ObtenerTrabajador(string id)
