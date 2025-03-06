@@ -1,21 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TrabajadorFormView.aspx.cs" Inherits="Proyecto_final.TrabajadorFormView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <div><asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" CssClass="button-back" /><i class="bi bi-arrow-left"></i></div>
+    <asp:LinkButton ID="btnVolver" runat="server" CssClass="button-back" OnClick="btnVolver_Click" OnClientClick="return confirm('¿Estás seguro de que quieres volver?');">
+    <i class="bi bi-arrow-left"></i> Volver
+    </asp:LinkButton>
+
     
-    <h2>Gestión de Trabajador</h2>
+    <h2 class="mt-3">Gestión de Trabajador</h2>
     
     <div class="forms-container">
     <div class="form-container">
 
         <h4>Datos del trabajador</h4>
         <label>Nombre:</label>
-        <asp:TextBox ID="txtNombre" runat="server" /><br/>
+        <p id="lblNombre" runat="server" class="mb-0 text-danger" ClientIDMode="Static"></p>
+        <asp:TextBox ID="txtNombre" runat="server" ClientIDMode="Static"/><br/>
 
         <label>Puesto:</label>
-        <asp:TextBox ID="txtPuesto" runat="server" /><br/>
+        <p id="lblPuesto" runat="server" class="mb-0  text-danger" ClientIDMode="Static"></p>
+        <asp:TextBox ID="txtPuesto" runat="server" ClientIDMode="Static"/><br/>
 
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar Trabajador" OnClick="btnGuardar_Click" CssClass="button" />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar Trabajador" OnClick="btnGuardar_Click" CssClass="button" OnClientClick="return validarForm();"/>
 
 
         
@@ -25,16 +30,17 @@
         <h4>Agregar Pago</h4>
 
         <label>Fecha:</label>
-        <asp:TextBox ID="txtFechaPago" runat="server" TextMode="Date" /><br/>
+        <p id="lblFecha" runat="server" class="mb-0  text-danger" ClientIDMode="Static"></p>
+        <asp:TextBox ID="txtFechaPago" runat="server" TextMode="Date" ClientIDMode="Static"/><br/>
 
         <asp:Label Text="Monto:" runat="server" />
-        <h5 id="lblMensaje" runat="server" class=" text-danger"></h5>
-        <asp:TextBox ID="txtMontoPago" runat="server" />
+        <p id="lblMonto" runat="server" class=" mb-0 text-danger" ClientIDMode="Static"></p>
+        <asp:TextBox ID="txtMontoPago" runat="server" ClientIDMode="Static"/>
 
         <br />
 
 
-        <asp:Button ID="btnAgregarPago" runat="server" Text="Agregar Pago" OnClick="btnAgregarPago_Click" CssClass="button" />
+        <asp:Button ID="btnAgregarPago" runat="server" Text="Agregar Pago" CssClass="button" OnClientClick="return validarPago();" OnClick="btnAgregarPago_Click"  />
 
         
     </div>
@@ -51,6 +57,7 @@
         </Columns>
     </asp:GridView>
 
-   
-
+    <br />
 </asp:Content>
+
+

@@ -9,7 +9,7 @@
                 <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/gallery/hero-header.jpg" width="470" alt="hero-header" /></div>
                 <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
                   <h4 class="fw-bold font-sans-serif">Bienvenido a Nomi-Tec</h4>
-                  <h1 class="fs-6 fs-xl-7 mb-5">Pago seguro, gestión eficiente.</h1><a class="btn btn-primary me-2" href="#!" role="button">Empieza</a>
+                  <h1 class="fs-6 fs-xl-7 mb-5">Pago seguro, gestión eficiente.</h1><a class="btn fw-bold text-dark btn-primary me-2" href="TrabajadoresView" role="button">Empieza</a>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-wallet2"></i></div>
                                 <h2 class="fs-4 fw-bold">Pagos automatizados</h2>
                                 <p class="mb-0">Facilita la dispersión de sueldos a cuentas bancarias, reduciendo tiempos y errores en los depósitos.</p>
                             </div>
@@ -58,7 +58,7 @@
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-clipboard-data"></i></div>
                                 <h2 class="fs-4 fw-bold">Reportes y análisis de costos laborales</h2>
                                 <p class="mb-0">Genera informes detallados sobre costos de nómina, prestaciones y retenciones para una mejor toma de decisiones.</p>
                             </div>

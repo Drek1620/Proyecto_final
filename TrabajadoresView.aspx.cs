@@ -17,6 +17,7 @@ namespace Proyecto_final
 
         private void CargarTrabajadores()
         {
+			//Cargo los trabajadores al gridview
 			var trabajadores = db.ObtenerTrabajadores();
 
 			gridTrabajadores.DataSource = trabajadores;
@@ -47,9 +48,10 @@ namespace Proyecto_final
 				else
 					System.Diagnostics.Debug.WriteLine($"Error: ID no valido al seleccionar trabajador {id}");
 			}
-			if (e.CommandName == "Eliminar")
+			if (e.CommandName == "Eliminar") //Metodo eliminar
 			{
-                string id = e.CommandArgument.ToString().Trim();
+                string id = e.CommandArgument.ToString().Trim(); //Obtengo el id del trabajador en la tabla
+				//comparo si el id no es nullo y ademas de que cumpla con el formado objectId de Mongo
                 if (!string.IsNullOrEmpty(id) && id.Length == 24 && MongoDB.Bson.ObjectId.TryParse(id, out _))
                 {
 					db.EliminarTrabajador(id);

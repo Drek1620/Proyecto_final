@@ -62,10 +62,33 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
+            
+
+
+
         </div>
+        <footer >
+            <!-- Logo de la empresa -->
+            <div style="margin-bottom: 15px;">
+                <img src="assets/img/gallery/logo-n.png" alt="Logo de la Empresa" style="width: 255px; height: auto;">
+            </div>
+
+            <!-- Enlaces -->
+            <nav style="margin-bottom: 15px;">
+                <a href="Default" style="color: #f4c095; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s;">
+                    Inicio
+                </a> |
+                <a href="About" style="color: #f4c095; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s;">
+                    Acerca
+                </a> |
+                <a href="Contact" style="color: #f4c095; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s;">
+                    Contacto
+                </a>
+            </nav>
+
+            <!-- Derechos de autor -->
+            <p style="font-size: 14px; opacity: 0.8;">&copy; 2025 Nomi-Tec | Todos los derechos reservados</p>
+        </footer>
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
