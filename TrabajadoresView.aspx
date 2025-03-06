@@ -15,10 +15,10 @@
         <asp:TemplateField HeaderText="Acciones">
             <ItemTemplate>
                 <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn-editar" CommandArgument='<%# Eval("Id") %>' />
-                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CssClass="btn-eliminar" OnClientClick="return confirm('¿Estás seguro de eliminar este registro?');" />
+                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CssClass="btn-eliminar" OnClientClick="return confirm('¿Estás seguro de eliminar este registro?');" CommandArgument='<%# Eval("Id") %>'/>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
     </asp:GridView>
-    <asp:Button ID="btnAgregar" CssClass="btn-editar" OnClick="btnAgregar_Click" Text="Agregar trabajador" runat="server"/>
+    <asp:Button ID="btnAgregar" CssClass="btn-primary2" OnClick="btnAgregar_Click" Text="Agregar trabajador" runat="server"/>
 </asp:Content>

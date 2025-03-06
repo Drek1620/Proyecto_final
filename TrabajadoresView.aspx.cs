@@ -52,7 +52,8 @@ namespace Proyecto_final
                 string id = e.CommandArgument.ToString().Trim();
                 if (!string.IsNullOrEmpty(id) && id.Length == 24 && MongoDB.Bson.ObjectId.TryParse(id, out _))
                 {
-                    Response.Redirect($"TrabajadorformView.aspx?id={id}");
+					db.EliminarTrabajador(id);
+					CargarTrabajadores();
                 }
                 else
                     System.Diagnostics.Debug.WriteLine($"Error: ID no valido al seleccionar trabajador {id}");

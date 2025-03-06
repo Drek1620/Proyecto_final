@@ -52,7 +52,7 @@ namespace Proyecto_final
             _trabajadoresCollection.UpdateOne(filtro, actualizacion);
         }
 
-        public void EliminarTrabajoador(string id) =>
+        public void EliminarTrabajador(string id) =>
             _trabajadoresCollection.DeleteOne(t => t.Id == id);
 
         public List<Trabajador> ObtenerTrabajadores() =>

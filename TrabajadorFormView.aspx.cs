@@ -68,7 +68,7 @@ namespace Proyecto_final
 			else
 			{
 				//Actualizar trabajador
-				trabajador.Id = ViewState["trabajadorId"].ToString();
+				trabajador.Id = ViewState["TrabajadorId"].ToString();
 				db.ActualizarTrabajador(trabajador.Id, trabajador);
 			}
 			Response.Redirect("TrabajadoresView.aspx");
@@ -76,7 +76,14 @@ namespace Proyecto_final
 
 		protected void btnAgregarPago_Click(object sender, EventArgs e)
 		{
-			if (ViewState["Pagos"] == null)
+            decimal monto;
+            if (!decimal.TryParse(txtMontoPago.Text, out monto))
+            {
+                lblMensaje.InnerText = "Ingrese un monto válido.";
+                return;
+            }
+
+            if (ViewState["Pagos"] == null)
 				ViewState["Pagos"] = new List<PagoNomina>();
 
 			var pagos = (List<PagoNomina>)ViewState["Pagos"];
@@ -94,5 +101,6 @@ namespace Proyecto_final
 		{
 			Response.Redirect("TrabajadoresView.aspx");
 		}
+
     }
 }

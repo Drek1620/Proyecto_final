@@ -18645,13 +18645,17 @@ border-top-right-radius: var(--bs-card-inner-border-radius);
     color: white;
     font-weight: bold;
     padding: 12px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Estilo de las filas */
 .row-style {
     border-bottom: 1px solid #ddd;
     padding: 10px;
+}
+
+td{
+    text-align:center;
 }
 
 /* Estilo de las filas alternas */
@@ -18667,6 +18671,7 @@ border-top-right-radius: var(--bs-card-inner-border-radius);
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    margin: 5px 0;
 }
 
 .btn-eliminar {
@@ -18679,3 +18684,67 @@ border-top-right-radius: var(--bs-card-inner-border-radius);
     margin-left: 5px;
 }
 
+.btn-primary2 {
+    background-color: #155CA2;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+/*Contenedor de los formas*/
+.forms-container{
+    display:flex;
+}
+/*Form de datos del trabajador*/
+.form-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label, .form-container h4 {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-back {
+    cursor: pointer;
+    background-color: #155CA2;
+    border-radius: 50px 50px;
+    border: none;
+    width:50px;
+    height:50px;
+    color:white;
+    margin-bottom:20px;
+}
